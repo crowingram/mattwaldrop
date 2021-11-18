@@ -2,20 +2,169 @@
     VARIABLE DECLARATIONS */
 
 //  Colors
-$mustard: #E0D021;
-$tomato: #e0546c;
-$sherbet: #F5992B;
-$lava: #F04627;
-$soft-peach: #F04627;
+$main-mustard: #e0d021;
+$main-tomato: #e0546c;
+$main-sherbet: #f5992b;
+$main-aqua: aqua;
+$main-text-color: $main-mustard;
+$main-title-color: $main-sherbet;
 
-$text-color: #111;
-$title-color: #220;
+$main-background-body: #193549;
 
-$background-body: blanchedalmond;
+//  Fonts
+$body-font-size: 16px;
+$body-font-face: 'Source Sans Pro', sans-serif;
+$main-font-face: 'Source Code Pro', monospace;
 
 /* ######################
     STYLES */
-
 body {
-    background-color: $background-body;
+	margin: 0;
+	padding: 0;
+	font-size: $body-font-size;
+	font-family: $body-font-face;
+	background-color: black;
+	color: white;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: gray;
+}
+
+main {
+	background-color: $main-background-body;
+	font-family: $main-font-face;
+	color: $main-text-color;
+	margin: 0;
+	padding: 3rem;
+}
+
+.main-content {
+	margin: 0 auto;
+	max-width: 80ch;
+}
+
+a {
+	text-decoration: none;
+
+	&:link {
+		color: red;
+	}
+	&:active {
+		color: $main-tomato;
+	}
+	&:visited {
+		color: $main-tomato;
+	}
+	&:link {
+		color: $main-tomato;
+	}
+	&:hover {
+		color: aqua;
+	}
+}
+
+main a {
+	text-decoration: none;
+
+	&:link {
+		color: $main-tomato;
+	}
+	&:active {
+		color: $main-tomato;
+	}
+	&:visited {
+		color: $main-tomato;
+	}
+	&:hover {
+		color: aqua;
+		text-decoration: underline;
+	}
+}
+
+nav {
+	padding-right: 2rem;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+nav li {
+	padding: 0.5rem 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $main-title-color;
+	margin-top: 3rem;
+}
+
+h1 {
+	margin-top: 0;
+}
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+	margin-top: 0;
+}
+h1:before {
+	content: '# ';
+}
+h2:before {
+	content: '## ';
+}
+h3:before {
+	content: '### ';
+}
+h4:before {
+	content: '#### ';
+}
+
+main ul {
+	list-style: none;
+	margin: 1rem 0 0 0;
+	padding: 0;
+}
+main li:before {
+	content: '- ';
+}
+
+main strong {
+	&:before,
+	&:after {
+		content: '**';
+	}
+}
+
+main em {
+	&:before,
+	&:after {
+		content: '_';
+	}
+}
+
+footer p {
+	padding: 1rem 2rem;
+}
+
+#title {
+	padding: 2rem;
+	font-size: x-large;
 }

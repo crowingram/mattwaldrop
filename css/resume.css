@@ -1,0 +1,101 @@
+/* ######################
+    VARIABLE DECLARATIONS */
+/* ######################
+    STYLES */
+main {
+  background-color: #193549;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  color: #e0d021;
+  margin: 0;
+  padding: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Code Pro", monospace;
+  color: #f5992b;
+  margin-top: 3rem;
+}
+
+main > h1 {
+  margin-top: 0;
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+  margin-top: 0;
+}
+
+h1:before {
+  content: '# ';
+}
+
+h2:before {
+  content: '## ';
+}
+
+h3:before {
+  content: '### ';
+}
+
+h4:before {
+  content: '#### ';
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #e0546c;
+}
+
+a:active {
+  color: #e0546c;
+}
+
+a:visited {
+  color: #e0546c;
+}
+
+a:link {
+  color: #e0546c;
+}
+
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+li:before {
+  content: '- ';
+}
+
+strong {
+  font-wieght: bold;
+}
+
+strong:before, strong:after {
+  content: '**';
+}
+
+em {
+  font-style: italic;
+}
+
+em:before, em:after {
+  content: '_';
+}
+/*# sourceMappingURL=resume.css.map */

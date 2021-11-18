@@ -23,6 +23,26 @@ header {
           align-items: center;
 }
 
+#title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+#title img {
+  height: 4rem;
+  margin-right: 0.75rem;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +66,7 @@ main {
 
 .main-content {
   margin: 0 auto;
-  max-width: 80ch;
+  max-width: 70ch;
 }
 
 a {
@@ -71,6 +91,10 @@ a:link {
 
 a:hover {
   color: aqua;
+}
+
+a:after {
+  content: '\200B';
 }
 
 main a {
@@ -171,10 +195,5 @@ main em:before, main em:after {
 
 footer p {
   padding: 1rem 2rem;
-}
-
-#title {
-  padding: 2rem;
-  font-size: x-large;
 }
 /*# sourceMappingURL=primary.css.map */

@@ -94,6 +94,7 @@ a {
 		color: aqua;
 	}
 
+	// Adds zero-width non-joiner character after each link so that URL will wrap separately from anchor text
 	&:after {
 		content: '\200B';
 	}

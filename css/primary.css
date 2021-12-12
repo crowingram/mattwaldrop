@@ -118,6 +118,10 @@ main a:hover {
   text-decoration: underline;
 }
 
+span {
+  color: #9ca238;
+}
+
 nav {
   padding-right: 2rem;
 }

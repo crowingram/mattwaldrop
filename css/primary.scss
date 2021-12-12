@@ -6,6 +6,7 @@ $main-mustard: #e0d021;
 $main-tomato: #e0546c;
 $main-sherbet: #f5992b;
 $main-aqua: aqua;
+$main-shrek: #9ca238;
 $main-text-color: $main-mustard;
 $main-title-color: $main-sherbet;
 
@@ -116,6 +117,10 @@ main a {
 		color: aqua;
 		text-decoration: underline;
 	}
+}
+
+span {
+	color: $main-shrek;
 }
 
 nav {

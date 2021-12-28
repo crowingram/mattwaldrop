@@ -57,9 +57,9 @@ footer {
 }
 
 main {
-  background-color: #152a39;
+  background-color: #222;
   font-family: "Source Code Pro", monospace;
-  color: #e0d021;
+  color: #c9d1d9;
   margin: 0;
   padding: 3rem;
 }
@@ -78,19 +78,19 @@ a:link {
 }
 
 a:active {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 a:visited {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 a:link {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 a:hover {
-  color: aqua;
+  color: #349ef2;
 }
 
 a:after {
@@ -102,24 +102,24 @@ main a {
 }
 
 main a:link {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 main a:active {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 main a:visited {
-  color: #e0546c;
+  color: #a7d7fd;
 }
 
 main a:hover {
-  color: aqua;
+  color: #349ef2;
   text-decoration: underline;
 }
 
 span {
-  color: #9ca238;
+  color: #d1aafd;
 }
 
 nav {
@@ -149,7 +149,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #f5992b;
+  color: #d59923;
   margin-top: 3rem;
 }
 

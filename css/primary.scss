@@ -7,10 +7,20 @@ $main-tomato: #e0546c;
 $main-sherbet: #f5992b;
 $main-aqua: aqua;
 $main-shrek: #9ca238;
-$main-text-color: $main-mustard;
-$main-title-color: $main-sherbet;
 
-$main-background-body: #152a39;
+$color-soft-gray: #c9d1d9;
+$color-blue: #349ef2;
+$color-light-blue: #a7d7fd;
+$color-lavender: #d1aafd;
+$color-gold: #d59923;
+
+$main-text-color: $color-soft-gray;
+$main-title-color: $color-gold;
+$main-link-color: $color-light-blue;
+$main-link-hover: $color-blue;
+$main-link-address: $color-lavender;
+
+$main-background-body: #222;
 
 //  Fonts
 $font-body-size: 16px;
@@ -83,16 +93,16 @@ a {
 		color: red;
 	}
 	&:active {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:visited {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:link {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:hover {
-		color: aqua;
+		color: $main-link-hover;
 	}
 
 	// Adds zero-width non-joiner character after each link so that URL will wrap separately from anchor text
@@ -105,22 +115,22 @@ main a {
 	text-decoration: none;
 
 	&:link {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:active {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:visited {
-		color: $main-tomato;
+		color: $main-link-color;
 	}
 	&:hover {
-		color: aqua;
+		color: $main-link-hover;
 		text-decoration: underline;
 	}
 }
 
 span {
-	color: $main-shrek;
+	color: $main-link-address;
 }
 
 nav {

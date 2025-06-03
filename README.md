@@ -1,7 +1,28 @@
 # mattwaldrop
 
-This is the résumé site of Matthew Waldrop. The overall design replicates the look of a code editor viewing a markdown file.
+## 🌐 Matthew Waldrop | Personal Website
 
-Links to old projects are supplied to the webarchive.org version from the time of Matt's exit from the project.
+Welcome to the repository for the personal portfolio and resume site of **Matthew Waldrop**, a seasoned Web Developer with deep experience in HTML, CSS/SCSS, JavaScript, and PHP.
 
-The site is currently live at https://www.mattwaldrop.com
+This site showcases professional experience, technical skills, project references, and work history, all optimized for performance and accessibility.
+
+---
+
+### 🚀 Live Site
+
+[Visit mattwaldrop.com](https://www.mattwaldrop.com)
+
+---
+
+### 📂 Project Structure
+
+```bash
+.
+├── css/                # Stylesheets (linked externally)
+├── media/              # Logo and media assets
+├── projects.html       # Portfolio/projects page
+├── about.html          # Personal bio and mission
+├── colophon.html       # Site information
+├── index.html          # Homepage (Resume)
+└── README.md           # This file
+

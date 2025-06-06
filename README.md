@@ -25,4 +25,5 @@ This site showcases professional experience, technical skills, project reference
 ├── colophon.html       # Site information
 ├── index.html          # Homepage (Resume)
 └── README.md           # This file
+```
 

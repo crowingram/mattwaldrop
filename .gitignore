@@ -1,0 +1,17 @@
+# --- Local-only files: kept locally, never published to GitHub ---
+
+# AI assistant instructions & context
+CLAUDE.md
+.claude/
+
+# Private working files (notes, drafts, archived material)
+/_private/
+
+# OS & editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Legacy Sass build artifacts (site is now plain CSS — no build step)
+.sass-cache/
+*.css.map

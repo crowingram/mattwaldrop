@@ -1,6 +1,32 @@
-# Block public access to the Git metadata directory.
-# The site is deployed by cloning this repo into the web root, so without
-# this rule https://www.mattwaldrop.com/.git/ (config, history, etc.) would
-# be reachable. Return 404 for any path containing /.git (covers /.git/* and
-# the harmless /.gitignore).
-RedirectMatch 404 /\.git
+# =====================================================================
+# mattwaldrop.com — static-site hardening (Apache / DreamHost)
+# Safe for a no-PHP, no-forms static site.
+# =====================================================================
+
+# --- Force HTTPS -----------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Block hidden files & directories --------------------------------
+# Returns 404 for /.git, /.gitignore, /.env, /.DS_Store, etc.
+# /.well-known/ is exempt so TLS/ACME + domain verification still work.
+RedirectMatch 404 /\.(?!well-known)
+
+# --- Disable directory listings --------------------------------------
+# If the site returns 500 right after deploy, delete THIS line and
+# re-deploy — it means the host won't allow Options in .htaccess.
+Options -Indexes
+
+# --- Security response headers ---------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+    # Stick to HTTPS for 1 year. Reversible via max-age=0; keep only while
+    # HTTPS is working (it is, on DreamHost).
+    Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>

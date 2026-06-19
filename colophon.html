@@ -2,88 +2,100 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Colophon | Matt Waldrop</title>
-		<link
-			rel="icon"
-			type="image/x-icon"
-			href="/media/logo-mw-white-goatee.ico"
-		/>
-		<link rel="stylesheet" href="https://use.typekit.net/hta3vcb.css" />
+		<title>Colophon — Matthew Waldrop</title>
+		<meta name="description" content="How Matthew Waldrop's site is built and deployed: technologies, accessibility, and hosting." />
+		<meta name="theme-color" content="#161618" />
+		<link rel="icon" type="image/x-icon" href="/media/logo-mw-white-goatee.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/primary.css" />
 	</head>
 	<body>
-		<header>
-			<div id="title">
-				<img src="media/logo-mw-white-200-236.png" alt="" />
-				<div>Matthew<br />Waldrop</div>
-			</div>
+		<a class="skip-link" href="#main">Skip to content</a>
 
-			<nav>
+		<header class="site-header">
+			<a class="brand" href="/index.html" aria-label="Matthew Waldrop — home">
+				<img src="media/logo-mw-white-200-236.png" alt="" width="48" height="57" />
+				<span class="wordmark">Matthew<br />Waldrop</span>
+			</a>
+			<nav class="site-nav" aria-label="Primary">
 				<ul>
-					<li><a href="/index.html">Resume</a></li>
-					<li><a href="/projects.html">Projects</a></li>
-					<li><a href="/about.html">About</a></li>
-					<li>Colophon</li>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/index.html#work">Work</a></li>
+					<li><a href="/index.html#experience">Experience</a></li>
+					<li><a href="/index.html#skills">Skills</a></li>
+					<li><a href="/colophon.html" aria-current="page">Colophon</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<main id="resume">
-			<div class="main-content">
-				<h1>Colophon</h1>
+		<main id="main">
+			<section class="section">
+				<div class="wrap prose" style="max-width: 60ch">
+					<div class="section-head"><span class="hash" aria-hidden="true">#</span><h1 style="margin:0;font-size:clamp(1.5rem,3.5vw,2.1rem)">Colophon</h1></div>
 
-				<h2>Technologies Used</h2>
-				<ul>
-					<li><strong>HTML5 / Semantic Markup</strong></li>
-					<li><strong>CSS3 / SCSS</strong></li>
-					<li><strong>JavaScript / ES6</strong></li>
-					<li><strong>PHP</strong> (Referenced in legacy projects)</li>
-					<li>
-						<strong>WordPress / Drupal</strong> (Professional experience
-						context)
-					</li>
-					<li><strong>Git / GitHub</strong> for version control</li>
-					<li>
-						<strong>Font + Icon Services</strong> Adobe TypeKit, Google Fonts
-					</li>
-				</ul>
+					<h3>Technologies</h3>
+					<ul>
+						<li>Hand-written <strong>HTML5</strong> with semantic landmarks</li>
+						<li><strong>CSS3</strong> with custom properties (design tokens) — no build step, no framework</li>
+						<li>A small amount of progressive-enhancement <strong>JavaScript</strong></li>
+						<li>Type: <span class="mono">Bricolage Grotesque</span>, <span class="mono">Hanken Grotesk</span>, and <span class="mono">JetBrains Mono</span> via Google Fonts</li>
+						<li><strong>Git / GitHub</strong> for version control</li>
+					</ul>
 
-				<h2>Deployment</h2>
-				<p>
-					This site is deployed on DreamHost using manual Git-based deployment
-					over SSH.
-				</p>
+					<h3>Accessibility</h3>
+					<ul>
+						<li>Targets <strong>WCAG 2.2 AA</strong>; every text/background pair verified for contrast</li>
+						<li>Skip link, keyboard-visible focus states, and a logical heading outline</li>
+						<li>Honors <span class="mono">prefers-reduced-motion</span></li>
+					</ul>
 
-				<h2>Features</h2>
-				<ul>
-					<li>Responsive, mobile-first layout</li>
-					<li>Accessible: WCAG-aligned markup and structure</li>
-					<li>Custom typography and clean design</li>
-					<li>Project links to external client sites and archived work</li>
-					<li>Highlighted career achievements with relevant links</li>
-				</ul>
+					<h3>Performance</h3>
+					<ul>
+						<li>Static files, no client framework — fast first paint and strong Core Web Vitals</li>
+						<li>Fonts preconnected and loaded with <span class="mono">display: swap</span></li>
+						<li>Explicit image dimensions to avoid layout shift</li>
+					</ul>
 
-				<h2>Contact</h2>
-				<p>Matthew Waldrop</p>
-				<p>
-					<a href="mailto:matt.waldrop@me.com">matt.waldrop@me.com</a>
-				</p>
-				<p>
-					<a href="tel:+18152812717">815-281-2717</a>
-				</p>
-			</div>
+					<h3>Deployment</h3>
+					<ul>
+						<li>Hosted on <strong>DreamHost</strong> via manual Git-based deployment over SSH</li>
+					</ul>
+
+					<h3>Design note</h3>
+					<p>
+						The monospace markers, <span class="mono">#</span> section headers, and
+						GitHub-dark palette are an evolution of this site's original
+						"Markdown-as-page" concept — a developer's résumé that wears its
+						source on its sleeve.
+					</p>
+
+					<h3>Contact</h3>
+					<ul>
+						<li><a href="mailto:matt.waldrop@me.com">matt.waldrop@me.com</a></li>
+					</ul>
+				</div>
+			</section>
 		</main>
-		<footer>
-			<p>&copy; Matthew Waldrop, 2025</p>
-			<p>All rights reserved</p>
+
+		<footer class="site-footer">
+			<div class="wrap">
+				<div class="contact">
+					<a href="mailto:matt.waldrop@me.com">matt.waldrop@me.com</a>
+					<a href="https://www.linkedin.com/in/mrwaldrop" rel="noopener">LinkedIn</a>
+					<a href="https://github.com/crowingram" rel="noopener">GitHub</a>
+				</div>
+				<p class="copy">© <span id="year">2025</span> Matthew Waldrop · <a href="/index.html">Home</a></p>
+			</div>
 		</footer>
+
+		<script>
+			document.getElementById("year").textContent = new Date().getFullYear();
+		</script>
 	</body>
 </html>

@@ -10,6 +10,10 @@
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
+# --- Legacy URL redirects (about.html / projects.html folded into the homepage) ---
+Redirect 301 /about.html      /
+Redirect 301 /projects.html   /index.html#projects
+
 # --- Block hidden files & directories --------------------------------
 # Returns 404 for /.git, /.gitignore, /.env, /.DS_Store, etc.
 # /.well-known/ is exempt so TLS/ACME + domain verification still work.

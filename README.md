@@ -19,13 +19,12 @@ This site showcases professional experience, technical skills, project reference
 ```bash
 .
 ├── css/
-│   ├── primary.css     # Site styles — modern CSS (custom properties + native nesting), no build step
+│   ├── primary.css     # Site styles — modern CSS (custom properties), no build step
 │   └── index.html      # Redirect to root for direct /css/ visits
 ├── media/              # Logo and media assets
-├── index.html          # Homepage (Resume)
-├── about.html          # Personal bio and mission
-├── projects.html       # Portfolio/projects page
-├── colophon.html       # Site information
+├── index.html          # Single-page site — résumé, work, experience, skills, projects, education
+├── colophon.html       # How the site is built
+├── .htaccess           # HTTPS, security headers, hidden-file blocking, legacy redirects
 └── README.md           # This file
 ```
 
@@ -33,5 +32,5 @@ This site showcases professional experience, technical skills, project reference
 
 ### 🎨 Styling
 
-Styling is hand-authored **modern CSS** (`css/primary.css`) using custom properties and native CSS nesting — no Sass/preprocessor and no build step.
-Theme tokens (colors, fonts) live in `:root`, so the palette is editable in one place and can be re-themed at runtime.
+Styling is hand-authored **modern CSS** (`css/primary.css`) using custom properties (design tokens) — no Sass/preprocessor and no build step.
+Theme tokens (colors, fonts) live in `:root`, and every color is drawn from the site's original palette.

@@ -1,0 +1,6 @@
+# Block public access to the Git metadata directory.
+# The site is deployed by cloning this repo into the web root, so without
+# this rule https://www.mattwaldrop.com/.git/ (config, history, etc.) would
+# be reachable. Return 404 for any path containing /.git (covers /.git/* and
+# the harmless /.gitignore).
+RedirectMatch 404 /\.git
